@@ -1,3 +1,1 @@
-export const qglConfig = {
-	
-}
+export const qglConfig = {}

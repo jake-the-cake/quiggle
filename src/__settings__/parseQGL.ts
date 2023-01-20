@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 
 function ruleTypeRouter(type: string): void {
-	console.log(type)
+  console.log(type)
   switch (type) {
     case 'SET_DEFAULT':
       console.log('defaule setting')
@@ -26,7 +26,7 @@ const getFileToParse = function () {
         .split('!!')
         .filter((x) => x !== '')
       codedRules.forEach((rule) => {
-        const ruleParams = rule.split(' ').filter(x=>x!=='')
+        const ruleParams = rule.split(' ').filter((x) => x !== '')
         ruleTypeRouter(ruleParams[0])
       })
       // console.log(codedRules)

@@ -1,7 +1,7 @@
-const code = false
+import * as GoatTail from './tail'
 
-export const Test = {
-  data: code
+export {
+  GoatTail
 }
 
 //////////////////////
