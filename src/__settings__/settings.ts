@@ -1,3 +1,3 @@
-export const goatSettings = {
+export const qglConfig = {
 	
 }
