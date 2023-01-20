@@ -1,0 +1,7 @@
+!! SET_DEFAULT responseObject --OBJ{
+	success: false,
+  statusCode: 500,
+  errors: null,
+  warnings: null,
+  data: null
+}
