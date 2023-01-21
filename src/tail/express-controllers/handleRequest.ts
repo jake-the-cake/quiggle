@@ -11,6 +11,7 @@ const defaultResponseObject: ResposeObject = {
 export const initResponseObject: BasicRequest = (req, res, next) => {
   const obj = defaultResponseObject
   if (next) {
+    console.log('test')
     req.responseObject = obj
     next()
   } else return obj // for testing
