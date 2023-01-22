@@ -9,16 +9,18 @@ const defaultResponseObject: ResposeObject = {
 }
 
 export const initResponseObject: BasicRequest = (req, res, next) => {
-  const obj = defaultResponseObject
-  if (next) {
-    console.log('test')
-    req.responseObject = obj
-    next()
-  } else return obj // for testing
+  if (!next) return defaultResponseObject
+  req.responseObject = defaultResponseObject
+  next()
+}
+
+export const setDataResponse = ( obj: ResposeObject, statusCode: number): void => {
+  obj.statusCode = statusCode
+  obj.success = true
+  obj.errors = null
 }
 
 export const getOne: BasicRequest = (req, res) => {
-  // const obj = initResponseObject()
-  console.log('this is a route')
+
   res !== null && res.status(200).json(req.responseObject)
 }
