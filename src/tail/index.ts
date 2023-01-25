@@ -1,12 +1,6 @@
-import * as RequestHandlers from './express-controllers/handleRequest'
-
-const {
-  initResponseObject,
-  setDataResponse
-} = RequestHandlers
+import { initResponseObject, setDataResponse } from './response'
 
 export {
-  RequestHandlers,
   initResponseObject,
   setDataResponse
 }
