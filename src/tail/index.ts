@@ -10,3 +10,5 @@ export {
   initResponseObject,
   setDataResponse
 }
+
+console.log('tail')

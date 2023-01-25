@@ -1,9 +1,7 @@
-import * as GoatTail from './tail'
+import * as goatTail from './tail'
 
 export {
-  GoatTail
+  goatTail
 }
 
-//////////////////////
-// first line
-// console.log('goats are cool')
+console.log('main')
