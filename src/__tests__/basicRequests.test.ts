@@ -1,4 +1,4 @@
-import { initResponseObject, setDataResponse } from '../tail/response'
+import { initResponseObject, setDataResponse, setErrorResponse } from '../tail/response'
 
 // Testing that the response object sets to the defaults
 const responseObject = initResponseObject({}, null)
@@ -17,4 +17,13 @@ describe('Set response object params for success', function(){
   test('Set success to true', () => expect(secondObject?.success).toBe(true))
   test('Set status to 200', () => expect(secondObject?.statusCode).toBe(200))
   test('Set errors to null', () => expect(secondObject?.errors).toBe(null))
+})
+
+// Testing that the response object changes on error
+const thirdObject: any = {...secondObject}
+setErrorResponse(thirdObject, 401)
+describe('Set response object params for errors', function(){
+  test('Set success to false', () => expect(thirdObject?.success).toBe(false))
+  test('Set status to 401', () => expect(thirdObject?.statusCode).toBe(401))
+  test('Set data to null', () => expect(thirdObject?.data).toBe(null))
 })

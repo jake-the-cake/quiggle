@@ -1,8 +1,9 @@
-import { initResponseObject, setDataResponse } from './response'
+import { initResponseObject, setDataResponse, setErrorResponse } from './response'
 
 export {
   initResponseObject,
-  setDataResponse
+  setDataResponse,
+  setErrorResponse
 }
 
 console.log('tail')
