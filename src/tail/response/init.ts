@@ -1,5 +1,5 @@
-import { BasicRequest } from "../../__types__/responseTypes"
-import { defaultResponseObject } from "./defaults"
+import { BasicRequest } from '../../__types__/responseTypes'
+import { defaultResponseObject } from './defaults'
 
 export const initResponseObject: BasicRequest = (req, res, next) => {
   if (!next) return defaultResponseObject
