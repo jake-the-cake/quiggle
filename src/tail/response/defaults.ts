@@ -1,4 +1,4 @@
-import { ResposeObject } from "../../__types__/responseTypes"
+import { ResposeObject } from '../../__types__/responseTypes'
 
 export const defaultResponseObject: ResposeObject = {
   success: false,
