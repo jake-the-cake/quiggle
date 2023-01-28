@@ -1,6 +1,6 @@
 {
   "name": "quiggle",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Javascript full stack toolkit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -27,6 +27,10 @@
     "goat",
     "quiet",
     "labs",
+    "full",
+    "stack",
+    "fullstack",
+    "full stack",
     "qgl",
     "quiggle",
     "askjake",
