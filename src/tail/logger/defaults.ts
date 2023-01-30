@@ -1,27 +1,27 @@
 type ColorObjectProps = {
-    prefix: string;
-    suffix: string;
-    reset: string;
-    color: {
-        black: string;
-        red: string;
-        green: string;
-        yellow: string;
-        blue: string;
-        magenta: string;
-        cyan: string;
-        white: string;
-    };
-    layer: {
-        font: string;
-        bg: string;
-    };
+  prefix: string
+  suffix: string
+  reset: string
+  color: {
+    black: string
+    red: string
+    green: string
+    yellow: string
+    blue: string
+    magenta: string
+    cyan: string
+    white: string
+  }
+  layer: {
+    font: string
+    bg: string
+  }
 }
 
 export const colorObject: ColorObjectProps = {
-  prefix: '\033[',
+  prefix: '\x1b[',
   suffix: 'm',
-  reset: '\033[0m',
+  reset: '\x1b[0m',
   color: {
     black: '0',
     red: '1',
