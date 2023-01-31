@@ -3,7 +3,7 @@ import { defaultResponseObject } from './defaults'
 
 export const initResponseObject: BasicRequest = (req, res, next) => {
   if (!next) return defaultResponseObject
-  req.responseObject = defaultResponseObject
+  res.responseObject = defaultResponseObject
   next()
 }
 
