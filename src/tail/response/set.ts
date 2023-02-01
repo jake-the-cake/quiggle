@@ -7,6 +7,7 @@ export const setDataResponse = (obj: ResposeObject, statusCode: number): void =>
 }
 
 export const setErrorResponse = (obj: ResposeObject, statusCode: number): void => {
+  if ( obj.errors === null ) obj.errors = []
   obj.statusCode = statusCode
   obj.success = false
   obj.data = null
