@@ -1,6 +1,6 @@
 {
   "name": "quiggle",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Javascript full stack toolkit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
