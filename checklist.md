@@ -1,9 +1,9 @@
 # outline
 
-1. TAIL (backend)
+## TAIL (backend)
 
-2. HEAD (frontend)
+## HEAD (frontend)
 
-3. HORN (validation)
+## HORN (validation)
 
-4. BELLY (data)
+## BELLY (data)
