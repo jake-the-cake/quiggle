@@ -36,6 +36,7 @@
     "askjake",
     "mern"
   ],
+  "bin":"./lib/bin.js",
   "author": "quietgoat",
   "license": "ISC",
   "bugs": {

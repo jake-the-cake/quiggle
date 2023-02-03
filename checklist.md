@@ -4,6 +4,8 @@
 
 ## HEAD (frontend)
 
-## HORN (validation)
+## HORN (auth & validation)
 
 ## BELLY (data)
+
+## BEARD (style)
