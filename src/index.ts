@@ -1,5 +1,4 @@
-import * as goatTail from './tail'
+// import * as goatTail from './tail'
+import { GoatTail } from './tail/classes/GoatTail'
 
-export { goatTail }
-
-console.log('main')
+export { GoatTail }
