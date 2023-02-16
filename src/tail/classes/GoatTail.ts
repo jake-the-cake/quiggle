@@ -7,21 +7,23 @@ export class GoatTail {
   name?: string
   router?: any
   portNumber: number
-  host: string
+  hostName: string
   messageText?: string
   server?: http.Server<typeof http.IncomingMessage, typeof http.ServerResponse>
 
   constructor(name: string = ''){
     if (name) this.name = name[0].toUpperCase() + name.slice(1).toLowerCase()
     this.portNumber = 6047
-    this.host = 'localhost'
+    this.hostName = 'localhost'
     return this
   }
   
   // initial configuration methods
-  port(port: number){ if (port) this.portNumber = port
+  port(port: number): this{ if (port) this.portNumber = port
     return this }
-  message(message: string){ if (message) this.messageText = message
+  host(host: string): this { if (host) this.hostName = host
+    return this }
+  message(message: string): this { if (message) this.messageText = message
     return this }
   map(router: any): this { this.router = new GoatRouter(router)
   return this }
@@ -30,13 +32,13 @@ export class GoatTail {
   newServer(){
     const router = this.router
     this.server = http.createServer(function(req: any, res: any) { serverMain(req, res, router) })
-    return this
+    // return this
   }
   run(){
     this.newServer()
     let message = `Server running on port ${this.portNumber}` + (this.messageText ? '\n' + this.messageText : '')
     if (this.name) message = this.name + ' ' +message.replace('S', 's')
-    this.server?.listen(this.portNumber, this.host, undefined, function(){ console.log(message) })
+    this.server?.listen(this.portNumber, this.hostName, undefined, function(){ console.log(message) })
     return this
   }
 }
