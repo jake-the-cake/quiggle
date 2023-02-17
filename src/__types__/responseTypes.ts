@@ -1,6 +1,7 @@
 // import { NextFunction, Request, Response } from 'express'
 
-export type BasicRequest = (req: Request | any, res: Response | any, next?: () => void) => ResposeObject | void
+// export type BasicRequest = (req: Request | any, res: Response | any, next?: () => void) => ResposeObject | void
+export type BasicRequest = (res: Response | any) => ResposeObject | void
 
 export interface ResponseWarning {
   type: string
