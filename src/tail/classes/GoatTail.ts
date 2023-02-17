@@ -1,6 +1,7 @@
 import * as http from 'http'
 import { isFile } from '../middleware/isFile'
 import { isRoute } from '../middleware/isRoute'
+import { initResponseObject } from '../response'
 import { GoatRouter } from './GoatRouter'
 
 export class GoatTail {
@@ -49,6 +50,8 @@ export class GoatTail {
 
 
 function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage, router: any){
+  initResponseObject(res)
+
   const [valid, routeArr, filename] = isRoute(req.url || '')
   if (valid) {
     router.findRoute(routeArr)
