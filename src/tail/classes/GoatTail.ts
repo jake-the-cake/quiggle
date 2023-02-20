@@ -3,6 +3,7 @@ import { isFile } from '../middleware/isFile'
 import { isRoute } from '../middleware/isRoute'
 import { initResponseObject } from '../response'
 import { GoatRouter } from './GoatRouter'
+import { PathString } from './StringObject'
 
 export class GoatTail {
   name?: string
@@ -33,7 +34,6 @@ export class GoatTail {
   newServer(){
     const router = this.router
     this.server = http.createServer(function(req: any, res: any) { serverMain(req, res, router) })
-    // return this
   }
   run(){
     this.newServer()
@@ -51,6 +51,10 @@ export class GoatTail {
 
 function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage, router: any){
   initResponseObject(res)
+
+  const obj = new PathString(req.url ?? '')
+  // if (obj.)
+
 
   const [valid, routeArr, filename] = isRoute(req.url || '')
   if (valid) {
