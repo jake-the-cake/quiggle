@@ -1,1 +1,3 @@
-console.log('tail > request')
+import { initRequestObject } from "./init"
+
+export { initRequestObject }

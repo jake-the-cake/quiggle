@@ -1,6 +1,7 @@
 import * as http from 'http'
-import { isFile } from '../middleware/isFile'
+// import { isFile } from '../middleware/isFile'
 import { isRoute } from '../middleware/isRoute'
+import { initRequestObject } from '../request'
 import { initResponseObject } from '../response'
 import { GoatRouter } from './GoatRouter'
 import { PathString } from './StringObject'
@@ -51,6 +52,7 @@ export class GoatTail {
 
 function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage, router: any){
   initResponseObject(res)
+  initRequestObject(req)
 
   const obj = new PathString(req.url ?? '')
   // if (obj.)

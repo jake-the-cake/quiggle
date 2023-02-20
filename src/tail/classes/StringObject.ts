@@ -112,6 +112,8 @@ export class PathString extends StringObject {
 		else this.errorLog('sub')
 		return this
 	}
+
+	
 	
 	parseFileName(): this {
 		// TODO
