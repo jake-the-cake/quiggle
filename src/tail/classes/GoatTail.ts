@@ -33,7 +33,7 @@ export class GoatTail {
   
   // create and run server
   newServer(){
-    const router = this.router
+    const router = this.router || new GoatRouter({})
     this.server = http.createServer(function(req: any, res: any) { serverMain(req, res, router) })
   }
   run(){
@@ -56,6 +56,7 @@ function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage, router
 
   const obj = new PathString(req.url ?? '')
   // if (obj.)
+  console.log(obj.parseUrlComponents())
 
 
   const [valid, routeArr, filename] = isRoute(req.url || '')

@@ -16,7 +16,7 @@ export class GoatRouter {
 		this.route = undefined
 		let route = this.router.pages
 		arr.forEach(function(item, i){
-			if (exists && route[item]) route = route[item]
+			if (exists && route && route[item]) route = route[item]
 			else exists = false
 		})
 		if (exists) this.route = route
