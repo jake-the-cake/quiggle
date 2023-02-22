@@ -57,6 +57,7 @@ function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage, router
   const obj = new PathString(req.url ?? '')
   // if (obj.)
   console.log(obj.parseUrlComponents())
+  console.log(req.url)
 
 
   const [valid, routeArr, filename] = isRoute(req.url || '')
