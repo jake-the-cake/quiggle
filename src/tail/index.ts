@@ -9,5 +9,3 @@ export {
   setDataResponse,
   setErrorResponse,
 }
-
-console.log('tail')

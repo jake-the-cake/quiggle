@@ -115,7 +115,7 @@ export class PathString extends StringObject {
 
 	parseUrlComponents() {
 		return [
-			this.reset().splitAt('#').getLastPosition()
+			this.reset().splitAt('?').getLastPosition()
 		]
 	}
 	

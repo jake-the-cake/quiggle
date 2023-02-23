@@ -1,7 +1,5 @@
 import { BasicRequest } from "../../__types__/responseTypes"
 
-export const finalResponse: any = (req: any, res: any) => {
-  res.status(res.responseObject.statusCode).json(res.responseObject)
+export const finalResponse: any = (res: any) => {
+  res.status(res.obj.statusCode).json(res.obj)
 }
-
-console.log('tail > response > final')

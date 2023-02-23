@@ -8,5 +8,3 @@ export {
   setErrorResponse,
   finalResponse
 }
-console.log('for commit')
-console.log('tail > response')

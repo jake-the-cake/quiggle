@@ -6,7 +6,7 @@ import { initResponseObject } from '../response'
 import { GoatRouter } from './GoatRouter'
 import { PathString } from './StringObject'
 
-export class GoatTail {
+class GoatTail {
   name?: string
   router?: any
   portNumber: number
@@ -45,12 +45,13 @@ export class GoatTail {
   }
 }
 
+export { runGoatTail as GoatTail }
 
+function runGoatTail(name: string) {
+  return new GoatTail(name)
+}
 
-
-
-
-function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage, router: any){
+function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage & {obj: any}, router: any){
   initResponseObject(res)
   initRequestObject(req)
 
@@ -65,5 +66,6 @@ function serverMain(req: http.IncomingMessage, res: http.OutgoingMessage, router
     router.findRoute(routeArr)
     if (router.route) console.log(`${'/' + routeArr.join('/')} is a route\n`)
   }
+  console.log(res.obj)
   res.end()
 }
