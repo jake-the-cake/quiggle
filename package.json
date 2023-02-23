@@ -33,8 +33,7 @@
     "full stack",
     "qgl",
     "quiggle",
-    "askjake",
-    "mern"
+    "askjake"
   ],
   "bin": "./lib/bin.js",
   "author": "quietgoat",

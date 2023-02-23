@@ -1,4 +1,4 @@
-import { initResponseObject, setDataResponse, setErrorResponse, finalResponse } from './response'
+import { setDataResponse, setErrorResponse } from './response'
 import { serverLog, Logger } from './logger'
 
 export {
@@ -6,11 +6,8 @@ export {
   serverLog,
   Logger,
   // response
-  initResponseObject,
   setDataResponse,
   setErrorResponse,
-  // final
-  finalResponse
 }
 
 console.log('tail')

@@ -12,5 +12,3 @@ export const setErrorResponse = (obj: ResposeObject, statusCode: number): void =
   obj.success = false
   obj.data = null
 }
-
-console.log('tail > response > set')

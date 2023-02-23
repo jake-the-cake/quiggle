@@ -5,4 +5,3 @@ export const serverLog = function (text: string): void {
 }
 
 export { Logger }
-console.log('tail > logger')
